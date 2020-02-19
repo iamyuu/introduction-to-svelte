@@ -12,6 +12,11 @@ import stateofjs from "./images/stateofjs.png";
 import risingStars from "./images/rising-stars.png";
 import svelte3Home from "./images/svelte3-home.png";
 
+import virtualDom from "./images/virtual-dom.png";
+import virtualDomAfter from "./images/virtual-dom-after.png";
+import svelteChanges from "./images/svelte-changes.png";
+import spreadsheetGIF from './images/spreadsheet.gif'
+
 export const themes = [nightOwl, customTheme];
 
 # Introduction To [Svelte](https://svelte.dev/)
@@ -171,3 +176,81 @@ Wasn't the Virtual DOM faster than the real DOM?
 <img src={svelteChanges} style={{ margin: 'auto', height: '70vh', backgroundSize: 'contain' }} />
 
 [Computer, build me an app](https://www.youtube.com/watch?v=AdNJ3fydeao)
+
+---
+
+# Truly [Reactive](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
+
+
+---
+
+# Reactive Assignments
+
+---
+
+# Changing state in [React](https://reactjs.org/)
+
+``` js
+const { count } = this.state;
+this.setState({
+  count: count + 1
+});
+```
+
+---
+
+# Changing state in [Svelte](https://svelte.dev/)
+
+``` js
+let count = 0;
+
+// later...
+count += 1;
+```
+
+---
+
+# Reactive Declarations
+
+---
+
+<img src={spreadsheetGIF} />
+
+---
+
+# Assign Operator
+
+``` js
+let a = 10;
+let b = a + 1;
+// b === 11;
+
+a = 20;
+// b === 11;
+```
+
+---
+
+# Destiny Operator
+
+``` js
+let a = 10;
+let b <= a + 1;
+// b === 11;
+
+a = 20;
+// b === 21;
+```
+
+---
+
+Destiny Operator in Svelte 3
+
+``` js
+let a = 10;
+$:  b = a + 1;
+// b === 11;
+
+a = 20;
+// b === 21;
+```
