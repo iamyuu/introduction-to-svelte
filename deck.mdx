@@ -1,3 +1,18 @@
+import {
+  CodeSurfer,
+  CodeSurferColumns,
+  Step,
+} from "code-surfer";
+import { github, vsDark } from "@code-surfer/themes";
+
+export const theme = vsDark;
+
+# Hello 👋
+
+You are using [MDX Deck](https://github.com/jxnblk/mdx-deck) and [Code Surfer](https://codesurfer.pomb.us)
+
+---
+
 import { nightOwl } from "@code-surfer/themes";
 import { customTheme } from "./theme";
 import "./styles.css";
@@ -70,9 +85,80 @@ https://risingstars.js.org/2019/en/#section-framework
 
 https://svelte.dev/
 
-<!--
-  Kalo kalian baca di dokumentasi resminya
-  Svelte adalah pendekatan baru buat bikin UI,
-  Svelte ini ga kaya tradisional framework, kaya React dan Vue yang pake virtual DOM,
-  tapi Svelte bakal compile kode kita jadi vanilla js, jadinya ini lebih cepat
--->
+---
+
+# Write [Less Code](https://svelte.dev/blog/write-less-code)
+
+---
+
+<CodeSurfer>
+
+``` js title="Vue" subtitle="263 characters"
+<template>
+  <div>
+    <input type="number" v-model.number="a">
+    <input type="number" v-model.number="b">
+
+    <p>{{a}} + {{b}} = {{a + b}}</p>
+  </div>
+</template>
+
+<script>
+  export default {
+    data: function() {
+      return {
+        a: 1,
+        b: 2
+      };
+    }
+  };
+</script>
+```
+
+``` js title="React" subtitle="442 characters"
+import React, { useState } from 'react';
+
+export default () => {
+  const [a, setA] = useState(1);
+  const [b, setB] = useState(2);
+
+  function handleChangeA(event) {
+    setA(+event.target.value);
+  }
+
+  function handleChangeB(event) {
+    setB(+event.target.value);
+  }
+
+  return (
+    <div>
+      <input type="number" value={a} onChange={handleChangeA}/>
+      <input type="number" value={b} onChange={handleChangeB}/>
+
+      <p>{a} + {b} = {a + b}</p>
+    </div>
+  );
+};
+```
+
+``` js title="Svelte" subtitle="145 characters"
+<script>
+	let a = 1;
+	let b = 2;
+</script>
+
+<input type="number" bind:value={a}>
+<input type="number" bind:value={b}>
+
+<p>{a} + {b} = {a + b}</p>
+```
+
+</CodeSurfer>
+
+---
+
+# Why does it matter?
+
+> _"A good way to stay flexible is to write less code."_
+
+`— Pragmatic Programmer`
