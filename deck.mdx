@@ -9,6 +9,7 @@ import { customTheme } from "./theme";
 import "./styles.css";
 
 import stateofjs from "./images/stateofjs.png";
+import bundleSize from "./images/bundle-size.png";
 import risingStars from "./images/rising-stars.png";
 import svelte3Home from "./images/svelte3-home.png";
 
@@ -43,12 +44,17 @@ export const themes = [nightOwl, customTheme];
 ---
 
 <img
+  src={bundleSize}
+  style={{ margin: "auto", height: "65vh", backgroundSize: "contain" }}
+/>
+
+##### https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/
+
+---
+
+<img
   src={stateofjs}
-  style={{
-    margin: "auto",
-    height: "65vh",
-    backgroundSize: "contain",
-  }}
+  style={{ margin: "auto", height: "65vh", backgroundSize: "contain" }}
 />
 
 https://2019.stateofjs.com/front-end-frameworks
@@ -163,17 +169,26 @@ Wasn't the Virtual DOM faster than the real DOM?
 
 ---
 
-<img src={virtualDom} style={{ margin: 'auto', height: '70vh', backgroundSize: 'contain' }} />
+<img
+  src={virtualDom}
+  style={{ margin: 'auto', height: '70vh', backgroundSize: 'contain' }}
+/>
 
 [Computer, build me an app](https://www.youtube.com/watch?v=qqt6YxAZoOc)
 
 ---
 
-<img src={virtualDomAfter} style={{ margin: 'auto', height: '70vh', backgroundSize: 'contain' }} />
+<img
+  src={virtualDomAfter}
+  style={{ margin: 'auto', height: '70vh', backgroundSize: 'contain' }}
+/>
 
 ---
 
-<img src={svelteChanges} style={{ margin: 'auto', height: '70vh', backgroundSize: 'contain' }} />
+<img
+  src={svelteChanges}
+  style={{ margin: 'auto', height: '70vh', backgroundSize: 'contain' }}
+/>
 
 [Computer, build me an app](https://www.youtube.com/watch?v=AdNJ3fydeao)
 
