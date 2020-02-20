@@ -89,64 +89,13 @@ https://svelte.dev/
 
 <CodeSurfer>
 
-``` js title="Vue" subtitle="263 characters"
-<template>
-  <div>
-    <input type="number" v-model.number="a">
-    <input type="number" v-model.number="b">
-
-    <p>{{a}} + {{b}} = {{a + b}}</p>
-  </div>
-</template>
-
-<script>
-  export default {
-    data: function() {
-      return {
-        a: 1,
-        b: 2
-      };
-    }
-  };
-</script>
+``` js showNumbers 1:19 title="Vue" subtitle="263 characters"
 ```
 
-``` js title="React" subtitle="442 characters"
-import React, { useState } from 'react';
-
-export default () => {
-  const [a, setA] = useState(1);
-  const [b, setB] = useState(2);
-
-  function handleChangeA(event) {
-    setA(+event.target.value);
-  }
-
-  function handleChangeB(event) {
-    setB(+event.target.value);
-  }
-
-  return (
-    <div>
-      <input type="number" value={a} onChange={handleChangeA}/>
-      <input type="number" value={b} onChange={handleChangeB}/>
-
-      <p>{a} + {b} = {a + b}</p>
-    </div>
-  );
-};
+``` js showNumbers 1:23 title="React" subtitle="442 characters" file=./codes/react.js
 ```
 
-``` js title="Svelte" subtitle="145 characters"
-<script>
-	let a = 1;
-	let b = 2;
-</script>
-
-<input type="number" bind:value={a}>
-<input type="number" bind:value={b}>
-
-<p>{a} + {b} = {a + b}</p>
+``` js showNumbers 1:9 title="Svelte" subtitle="145 characters"
 ```
 
 </CodeSurfer>
@@ -250,7 +199,7 @@ a = 20;
 
 ``` js
 let a = 10;
-let b <= a + 1;
+$:  b = a + 1;
 // b === 11;
 
 a = 20;
@@ -259,13 +208,101 @@ a = 20;
 
 ---
 
-Destiny Operator in Svelte 3
+# Enough talk 🗣
 
-``` js
-let a = 10;
-$:  b = a + 1;
-// b === 11;
+## Show me the code! 💻
 
-a = 20;
-// b === 21;
+---
+
+<CodeSurfer>
+
+``` js 1:15 title="Styling" subtitle="https://svelte.dev/examples#nested-components" file=./examples/styling.js
 ```
+
+``` js 17:18 title="Styling" subtitle="https://svelte.dev/examples#nested-components" file=./examples/styling.js
+```
+
+``` js 1:7 title="Props" subtitle="https://svelte.dev/examples#default-values" file=./examples/props.js
+```
+
+``` js 9:14 title="Props" subtitle="https://svelte.dev/examples#default-values" file=./examples/props.js
+```
+
+``` js 1:11 title="State" subtitle="https://svelte.dev/examples#reactive-assignments" file=./examples/state.js
+```
+
+``` js 1:11 title="Logic" subtitle="https://svelte.dev/examples#else-if-blocks" file=./examples/logic.js
+```
+
+``` js 1:9 title="Events" subtitle="https://svelte.dev/examples#event-modifiers" file=./examples/event.js
+```
+
+``` js 1:6 title="Bindings" subtitle="https://svelte.dev/examples#text-inputs" file=./examples/binding.js
+```
+
+``` js 1:10 title="Lifecycle Events" subtitle="https://svelte.dev/examples#text-inputs" file=./examples/lifecycle-event.js
+```
+
+``` js 26:38 title="Lifecycle Events" subtitle="https://svelte.dev/examples#text-inputs" file=./examples/lifecycle-event.js
+```
+
+``` js 1:5 title="Stores" subtitle="https://svelte.dev/examples#writable-stores" file=./examples/store.js
+```
+
+``` js 28:40 title="Stores" subtitle="https://svelte.dev/examples#writable-stores" file=./examples/store.js
+```
+
+``` js 42:54 title="Stores" subtitle="https://svelte.dev/examples#writable-stores" file=./examples/store.js
+```
+
+``` js 56:68 title="Stores" subtitle="https://svelte.dev/examples#writable-stores" file=./examples/store.js
+```
+
+``` js 7:26 title="Stores" subtitle="https://svelte.dev/examples#writable-stores" file=./examples/store.js
+```
+
+``` js 1:15 title="Transitions" subtitle="https://svelte.dev/examples#transition" file=./examples/transition.js
+```
+
+</CodeSurfer>
+
+---
+
+# Demo Time 🎉
+
+## (It can go wrong 🤷‍♂️)
+
+---
+
+# Where do I go next?
+
+- https://svelte.dev
+- https://svelte.dev/examples
+- https://svelte.dev/tutorial/basics
+- Rich Harris talks:
+  - Computer, Build Me an App: https://www.youtube.com/watch?v=qqt6YxAZoOc
+  - Rethinking Reactivity: https://www.youtube.com/watch?v=AdNJ3fydeao
+
+---
+
+# Join with the community
+
+- Svelte on Discord: https://svelte.dev/chat
+- Svelte (RU) on Telegram: https://t.me/sveltejs
+- Svelte Indonesia on Telegram: https://t.me/svelte_id
+
+---
+
+# Other projects
+
+- [Sapper](https://sapper.svelte.dev/): Next.js/Nuxt for Svelte.
+- [Svelte Native](https://svelte-native.technology/): native apps framework based on NativeScript.
+- [Svelte GL](https://github.com/sveltejs/gl): WebGL render in Svelte.
+
+---
+
+# Thanks </👋>
+
+[@iamyuu027](https://twitter.com/iamyuu027)/[@iamyuu](https://github.com/iamyuu)
+
+http://introduction-to-svelte3.netlify.com
