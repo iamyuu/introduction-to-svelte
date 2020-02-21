@@ -1,12 +1,19 @@
-import {
-  CodeSurfer,
-  CodeSurferColumns,
-  Step,
-} from "code-surfer";
+import { Appear } from "mdx-deck";
+import { CodeSurfer, CodeSurferColumns } from "code-surfer";
 
 import { nightOwl } from "@code-surfer/themes";
 import { customTheme } from "./theme";
 import "./styles.css";
+
+import stateofjs from "./images/stateofjs.png"
+import bundleSize from "./images/bundle-size.png"
+import risingStars from "./images/rising-stars.png"
+import svelte3Home from "./images/svelte3-home.png"
+import virtualDom from "./images/virtual-dom.png"
+import virtualDomAfter from "./images/virtual-dom-after.png"
+import svelteChanges from "./images/svelte-changes.png"
+import spreadsheet from "./images/spreadsheet.gif"
+import demo from "./images/demo.gif"
 
 export const themes = [nightOwl, customTheme];
 
@@ -20,30 +27,32 @@ export const themes = [nightOwl, customTheme];
 
 # Hello <👋>
 
-- I am [Muhammad Yusuf](https://iamyuu.netlify.com/) 🤝
-- Information Systems Student @ [Binus](https://onlinelearning.binus.ac.id/) 🏫
-- PHP Developer @ [Achiko](https://www.achiko.co) 👨‍💻
-- But I ❤️ [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+<ul>
+  <Appear>
+    <li>I am <a href="https://iamyuu.netlify.com/">Muhammad Yusuf</a> 🤝</li>
+    <li>Information Systems @ <a href="https://onlinelearning.binus.ac.id/">Binus</a> 🏫</li>
+    <li>PHP Developer @ <a href="https://www.achiko.co">Achiko</a> 👨‍💻</li>
+    <li>But I ❤️ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+  </Appear>
+</ul>
 
 ---
 
-# [Svelte](https://svelte.dev/)? 🤔
-
-<!-- Svelte apaan tuh? Baru denger -->
+# Svelte? 🤔
 
 ---
 
 <img
-  src="./images/stateofjs.png"
+  src={stateofjs}
   style={{ margin: "auto", height: "65vh", backgroundSize: "contain" }}
 />
 
-##### https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/
+https://s.id/2019-comparison-fe-frameworks
 
 ---
 
 <img
-  src="./images/bundle-size.png"
+  src={bundleSize}
   style={{ margin: "auto", height: "65vh", backgroundSize: "contain" }}
 />
 
@@ -52,7 +61,7 @@ https://2019.stateofjs.com/front-end-frameworks
 ---
 
 <img
-  src="./images/rising-stars.png"
+  src={risingStars}
   style={{ margin: "auto", height: "70vh", backgroundSize: "contain" }}
 />
 
@@ -65,7 +74,7 @@ https://risingstars.js.org/2019/en/#section-framework
 ---
 
 <img
-  src="./images/svelte3-home.png"
+  src={svelte3Home}
   style={{ margin: "auto", height: "70vh", backgroundSize: "contain" }}
 />
 
@@ -79,13 +88,13 @@ https://svelte.dev/
 
 <CodeSurfer>
 
-``` js showNumbers 1:19 title="Vue" subtitle="263 characters"
+``` js showNumbers 1:19 title="Vue" subtitle="263 characters" file=./codes/vue.js
 ```
 
 ``` js showNumbers 1:23 title="React" subtitle="442 characters" file=./codes/react.js
 ```
 
-``` js showNumbers 1:9 title="Svelte" subtitle="145 characters"
+``` js showNumbers 1:9 title="Svelte" subtitle="145 characters" file=./codes/svelte.js
 ```
 
 </CodeSurfer>
@@ -109,7 +118,7 @@ Wasn't the Virtual DOM faster than the real DOM?
 ---
 
 <img
-  src="./images/virtual-dom.png"
+  src={virtualDom}
   style={{ margin: 'auto', height: '70vh', backgroundSize: 'contain' }}
 />
 
@@ -118,14 +127,16 @@ Wasn't the Virtual DOM faster than the real DOM?
 ---
 
 <img
-  src="./images/virtual-dom-after.png"
+  src={virtualDomAfter}
   style={{ margin: 'auto', height: '70vh', backgroundSize: 'contain' }}
 />
+
+[Computer, build me an app](https://www.youtube.com/watch?v=qqt6YxAZoOc) (edited)
 
 ---
 
 <img
-  src="./images/svelte-changes.png"
+  src={svelteChanges}
   style={{ margin: 'auto', height: '70vh', backgroundSize: 'contain' }}
 />
 
@@ -168,7 +179,7 @@ count += 1;
 
 ---
 
-<img src="./images/spreadsheet.gif" />
+<img src={spreadsheet} />
 
 ---
 
@@ -258,11 +269,15 @@ a = 20;
 
 ---
 
-<img src="./images/demo.gif" />
+<CodeSurferColumns>
+
+<img src={demo} />
 
 # Demo Time 🎉
 
 ## (It can go wrong 🤷‍♂️)
+
+</CodeSurferColumns>
 
 ---
 
@@ -272,24 +287,24 @@ a = 20;
 - https://svelte.dev/examples
 - https://svelte.dev/tutorial/basics
 - Rich Harris talks:
-  - Computer, Build Me an App: https://www.youtube.com/watch?v=qqt6YxAZoOc
-  - Rethinking Reactivity: https://www.youtube.com/watch?v=AdNJ3fydeao
+  - https://s.id/rethinking-reactivity
+  - https://s.id/computer-build-me-an-app
 
 ---
 
-# Join with the community
+# Join Community
 
-- Svelte on Discord: https://svelte.dev/chat
-- Svelte (RU) on Telegram: https://t.me/sveltejs
-- Svelte Indonesia on Telegram: https://t.me/svelte_id
+- https://svelte.dev/chat
+- https://t.me/sveltejs
+- https://t.me/svelte_id
 
 ---
 
-# Other projects
+# Other Projects
 
 - [Sapper](https://sapper.svelte.dev/): Next.js/Nuxt for Svelte.
-- [Svelte Native](https://svelte-native.technology/): native apps framework based on NativeScript.
 - [Svelte GL](https://github.com/sveltejs/gl): WebGL render in Svelte.
+- [Svelte Native](https://svelte-native.technology/): native apps framework.
 
 ---
 
