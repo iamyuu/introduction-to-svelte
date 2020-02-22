@@ -1,5 +1,5 @@
 import { Appear } from "mdx-deck";
-import { CodeSurfer, CodeSurferColumns } from "code-surfer";
+import { CodeSurfer, CodeSurferColumns, Step } from "code-surfer";
 
 import { nightOwl } from "@code-surfer/themes";
 import { customTheme } from "./theme";
@@ -8,6 +8,7 @@ import "./styles.css";
 import stateofjs from "./images/stateofjs.png"
 import bundleSize from "./images/bundle-size.png"
 import risingStars from "./images/rising-stars.png"
+import comparison from "./images/comparison.png"
 import svelte3Home from "./images/svelte3-home.png"
 import virtualDom from "./images/virtual-dom.png"
 import virtualDomAfter from "./images/virtual-dom-after.png"
@@ -43,7 +44,7 @@ export const themes = [nightOwl, customTheme];
 ---
 
 <img
-  src={stateofjs}
+  src={bundleSize}
   style={{ margin: "auto", height: "65vh", backgroundSize: "contain" }}
 />
 
@@ -52,7 +53,7 @@ https://s.id/2019-comparison-fe-frameworks
 ---
 
 <img
-  src={bundleSize}
+  src={stateofjs}
   style={{ margin: "auto", height: "65vh", backgroundSize: "contain" }}
 />
 
@@ -69,6 +70,15 @@ https://risingstars.js.org/2019/en/#section-framework
 
 ---
 
+<img
+  src={comparison}
+  style={{ margin: "auto", height: "70vh", backgroundSize: "contain" }}
+/>
+
+https://s.id/big4-fe-comparison
+
+---
+
 # So what is [Svelte](https://svelte.dev/)?
 
 ---
@@ -78,7 +88,7 @@ https://risingstars.js.org/2019/en/#section-framework
   style={{ margin: "auto", height: "70vh", backgroundSize: "contain" }}
 />
 
-https://svelte.dev/
+https://svelte.dev
 
 ---
 
@@ -155,18 +165,19 @@ Wasn't the Virtual DOM faster than the real DOM?
 
 # Changing state in [React](https://reactjs.org/)
 
-``` js
+``` js showNumbers
 const { count } = this.state;
-this.setState({
-  count: count + 1
-});
+const [conunt, setCount] = useState(0);
+
+// later...
+setCount(count + 1);
 ```
 
 ---
 
 # Changing state in [Svelte](https://svelte.dev/)
 
-``` js
+``` js showNumbers
 let count = 0;
 
 // later...
@@ -223,13 +234,13 @@ a = 20;
 ``` js 17:18 title="Styling" subtitle="https://svelte.dev/examples#nested-components" file=./examples/styling.js
 ```
 
+``` js 1:11 title="State" subtitle="https://svelte.dev/examples#reactive-assignments" file=./examples/state.js
+```
+
 ``` js 1:7 title="Props" subtitle="https://svelte.dev/examples#default-values" file=./examples/props.js
 ```
 
 ``` js 9:14 title="Props" subtitle="https://svelte.dev/examples#default-values" file=./examples/props.js
-```
-
-``` js 1:11 title="State" subtitle="https://svelte.dev/examples#reactive-assignments" file=./examples/state.js
 ```
 
 ``` js 1:11 title="Logic" subtitle="https://svelte.dev/examples#else-if-blocks" file=./examples/logic.js
@@ -271,11 +282,21 @@ a = 20;
 
 <CodeSurferColumns>
 
+<Step>
+
 <img src={demo} />
 
 # Demo Time 🎉
 
+</Step>
+
+<Step>
+
+<img src={demo} />
+
 ## (It can go wrong 🤷‍♂️)
+
+</Step>
 
 </CodeSurferColumns>
 
@@ -302,7 +323,7 @@ a = 20;
 
 # Other Projects
 
-- [Sapper](https://sapper.svelte.dev/): Next.js/Nuxt for Svelte.
+- [Sapper](https://sapper.svelte.dev/): Next.js/Nuxt.js for Svelte.
 - [Svelte GL](https://github.com/sveltejs/gl): WebGL render in Svelte.
 - [Svelte Native](https://svelte-native.technology/): native apps framework.
 
